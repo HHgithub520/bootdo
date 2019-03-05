@@ -39,7 +39,7 @@ public class DictController extends BaseController {
 	@GetMapping("/list")
 	@RequiresPermissions("common:dict:dict")
 	public PageUtils list(@RequestParam Map<String, Object> params) {
-		// 查询列表数据
+		// 查询词典列表数据
 		Query query = new Query(params);
 		List<DictDO> dictList = dictService.list(query);
 		int total = dictService.count(query);
